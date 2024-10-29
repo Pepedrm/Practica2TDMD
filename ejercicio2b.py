@@ -21,14 +21,14 @@ def generar_funciones_monotonas():
                 for fd in codominio:
                     f = {"a": fa, "b": fb, "c": fc, "d": fd}
                     if es_monotona(f):
-                        funciones.append([(k, v) for k, v in f.items()])
+                        funciones.append(f)
     return funciones
 
 # Imprimir las funciones monótonas crecientes
 funciones_monotonas = generar_funciones_monotonas()
 print("Funciones monótonas crecientes de dominio a codominio:")
-for funcion in funciones_monotonas:
-    print(funcion)
+for f in funciones_monotonas:
+    print(f)
 
 # Mostrar el número total de funciones monótonas crecientes encontradas
 print(f"Número total de funciones monótonas crecientes: {len(funciones_monotonas)}")
